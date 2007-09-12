@@ -1,18 +1,25 @@
-Summary:	zope.event package used in Zope 3
+Summary:	Simple event system
 Name:		Zope-Event
 Version:	3.4.0
-Release:	0.1
-License:	ZPL 2.0
-Group:		Development/Tools
+Release:	1
+License:	ZPL 2.1
+Group:		Libraries/Python
 Source0:	http://download.zope.org/distribution/zope.event-%{version}.tar.gz
 # Source0-md5:	3a3d4bb9b6275149a05628262aba531f
+URL:		http://www.zope.org/
 BuildRequires:	python
 BuildRequires:	python-devel
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-zope.event package used in Zope 3.
+The zope.event package provides a simple event system.  It provides:
+- an event publishing system
+- a very simple event-dispatching system on which more sophisticated event
+  dispatching systems can be built.  (For example, a type-based event
+  dispatching system that builds on zope.event can be found in
+  zope.component
+
 
 %prep
 %setup -q -n zope.event-%{version}
