@@ -2,7 +2,7 @@ Summary:	Simple event system
 Summary(pl.UTF-8):	Prosty system zdarzeń
 Name:		Zope-Event
 Version:	3.4.0
-Release:	1
+Release:	2
 License:	ZPL 2.1
 Group:		Libraries/Python
 Source0:	http://download.zope.org/distribution/zope.event-%{version}.tar.gz
@@ -42,6 +42,7 @@ python ./setup.py build
 rm -rf $RPM_BUILD_ROOT
 
 python ./setup.py install \
+	--install-purelib=%{py_sitedir} \
 	--optimize 2 \
 	--root=$RPM_BUILD_ROOT
 
@@ -52,6 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{py_sitescriptdir}/zope/event
-%{py_sitescriptdir}/zope.event-*.egg-info
-%{py_sitescriptdir}/zope.event-*-nspkg.pth
+%{py_sitedir}/zope/event
+%{py_sitedir}/zope.event-*.egg-info
+%{py_sitedir}/zope.event-*-nspkg.pth
