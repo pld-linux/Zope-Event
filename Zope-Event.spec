@@ -10,6 +10,7 @@ Source0:	http://pypi.python.org/packages/source/z/zope.event/zope.event-%{versio
 URL:		http://www.zope.org/
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
+BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
@@ -27,9 +28,9 @@ The zope.event package provides a simple event system. It provides:
 Pakiet zope.event udostępnia prosty system zdarzeń. Zawiera:
 - system publikacji zdarzeń
 - bardzo prosty system przekazywania zdarzeń, w oparciu o który można
-  stworzyć bardziej wyszukane systemy przekazywania zdarzeń (na
-  przykład system przekazywania zdarzeń oparty na typach, zbudowany w
-  oparciu o zope.event, można znaleźć w zope.component)
+  stworzyć bardziej wyszukane systemy przekazywania zdarzeń (na przykład
+  system przekazywania zdarzeń oparty na typach, zbudowany w oparciu o
+  zope.event, można znaleźć w zope.component)
 
 %prep
 %setup -q -n zope.event-%{version}
