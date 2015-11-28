@@ -36,12 +36,12 @@ Pakiet zope.event udostępnia prosty system zdarzeń. Zawiera:
 %setup -q -n zope.event-%{version}
 
 %build
-python ./setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python ./setup.py install \
+%py_install \
 	--install-purelib=%{py_sitedir} \
 	--optimize 2 \
 	--root=$RPM_BUILD_ROOT
